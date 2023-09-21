@@ -27,8 +27,8 @@ export class ProductComponent
     AfterViewChecked,
     OnDestroy
 {
-
-  public isProductVisible: boolean =  false;
+  public isProductVisible: boolean = false;
+  public currentPrice: number = 10;
 
   constructor() {
     console.log('Constructor');
@@ -65,5 +65,9 @@ export class ProductComponent
 
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
+  }
+
+  increasePrice() {
+    this.currentPrice++;
   }
 }
